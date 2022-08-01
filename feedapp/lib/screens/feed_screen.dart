@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../components/appbar_component.dart';
-import '../controllers/post/details.post.dart';
 import '../models/post_model.dart';
 import '../repositories/post_repository.dart';
 import 'details_screen.dart';
@@ -12,8 +10,6 @@ class FeedHomeScreen extends StatefulWidget {
   @override
   _FeedHomeScreenState createState() => _FeedHomeScreenState();
 }
-
-final DatailsPost detailsPost = DatailsPost();
 
 class _FeedHomeScreenState extends State<FeedHomeScreen> {
   @override

@@ -24,13 +24,14 @@ class DetailsPostScreen extends StatelessWidget {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               PostModel? post = snapshot.data;
+
               return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
                       padding: const EdgeInsets.only(top: 20, left: 20),
                       child: Text(
-                        post!.title.toString(),
+                        "${post!.title}",
                         style: GoogleFonts.notoSerifGeorgian(
                             fontSize: mediaQuery.textScaleFactor * 26,
                             color: Colors.black,

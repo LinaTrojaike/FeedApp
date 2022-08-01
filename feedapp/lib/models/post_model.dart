@@ -1,8 +1,11 @@
+import 'package:feedapp/models/user_model.dart';
+
 class PostModel {
   int? id;
   int? userId;
   String? title;
   String? body;
+  Future<UserModel>? user;
 
   PostModel({this.id, this.userId, this.title, this.body});
 

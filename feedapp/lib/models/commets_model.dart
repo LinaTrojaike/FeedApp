@@ -25,3 +25,5 @@ class CommentsModel {
     return data;
   }
 }
+
+// classe que representa os comentários presentes na api

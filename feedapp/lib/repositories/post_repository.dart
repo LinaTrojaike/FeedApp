@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:feedapp/models/commets_model.dart';
+import 'package:feedapp/models/user_model.dart';
 import '../models/post_model.dart';
 
 class PostRepository {
@@ -27,4 +28,12 @@ class PostRepository {
         .map((post) => CommentsModel.fromJson(post))
         .toList();
   }
+
+  Future<UserModel> getUserById(int id) async {
+    final response =
+        await Dio().get('https://jsonplaceholder.typicode.com/users/$id');
+
+    return UserModel.fromJson(response.data);
+  }
 }
+//extração de dados da api. conexão entre o aplicativo e a api/banco de dados. "**Model" representação das entidades que estão no banco de dados/api"
